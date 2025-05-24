@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Habitaciones - Hotel Tránsito</title>
+  <style>
+    * { margin:0; padding:0; box-sizing:border-box; font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+    body { background:#f5f5f5; color:#333; }
+    nav { background:#2c3e50; padding:10px 0; text-align:center; }
+    nav a { color:#fff; margin:0 20px; text-decoration:none; font-weight:bold; transition:color .3s; }
+    nav a:hover { color:#f39c12; }
+    .section { padding:40px 20px; max-width:1000px; margin:auto; }
+    .section h2 { font-size:2rem; margin-bottom:20px; text-align:center; }
+    .room-list { display:grid; grid-template-columns:repeat(auto-fit, minmax(280px, 1fr)); gap:20px; }
+    .room-card { background:#fff; border-radius:10px; box-shadow:0 0 15px rgba(0,0,0,0.1); overflow:hidden; transition:transform .3s; }
+    .room-card:hover { transform:translateY(-5px); }
+    .room-card img { width:100%; display:block; }
+    .room-info { padding:15px; }
+    .room-info h3 { margin-bottom:10px; }
+  </style>
+</head>
+<body>
+  <nav>
+    <a href="index.html">Inicio</a>
+    <a href="habitaciones.html">Habitaciones</a>
+    <a href="#">Servicios</a>
+    <a href="#">Contacto</a>
+  </nav>
+  <section class="section">
+    <h2>Nuestras Habitaciones</h2>
+    <div class="room-list">
+      <div class="room-card">
+        <img src="https://img.freepik.com/fotos-premium/nueva-habitacion-lujo-cama_124907-134.jpg" alt="Suite Presidencial">
+        <div class="room-info">
+          <h3>Suite Presidencial</h3>
+          <p>Amplia suite con vista al lago, sala de estar, y jacuzzi privado.</p>
+        </div>
+      </div>
+      <div class="room-card">
+        <img src="https://img.freepik.com/fotos-premium/habitacion-doble-moderno_124907-134.jpg" alt="Doble Deluxe">
+        <div class="room-info">
+          <h3>Doble Deluxe</h3>
+          <p>Habitación para dos personas con balcón y baño con ducha de lluvia.</p>
+        </div>
+      </div>
+      <div class="room-card">
+        <img src="https://img.freepik.com/fotos-premium/habitacion-ejecutiva_124907-134.jpg" alt="Ejecutiva">
+        <div class="room-info">
+          <h3>Ejecutiva</h3>
+          <p>Diseño moderno, escritorio de trabajo y conexión a internet de alta velocidad.</p>
+        </div>
+      </div>
+      <!-- añade más habitaciones aquí -->
+    </div>
+  </section>
+</body>
+</html>
