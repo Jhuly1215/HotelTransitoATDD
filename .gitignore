@@ -1,0 +1,49 @@
+# Maven target directory
+/target/
+
+# Eclipse/IntelliJ IDEA project files
+*.iml
+.idea/
+*.ipr
+*.iws
+.classpath
+.project
+.settings/
+
+# VS Code
+.vscode/
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Compiled class files
+*.class
+
+# Package files
+*.jar
+*.war
+*.ear
+
+# WebDriver binaries
+chromedriver*
+geckodriver*
+
+# Others
+node_modules/
+.env
+
+# Ignore test output
+surefire-reports/
+
+# Ignore build tools
+/build/
+/dist/
+
+# Ignore backup files
+*~
+*.swp
+*.swo
