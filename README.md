@@ -44,6 +44,7 @@ HotelTransitoATDD/
 │   └── index.html   
 └── README.md
 
+```
 ## 🚀 Cómo ejecutar
 
 1. **Clonar el repositorio**  
