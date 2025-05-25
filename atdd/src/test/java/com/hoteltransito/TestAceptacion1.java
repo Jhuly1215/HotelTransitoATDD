@@ -17,7 +17,7 @@ public class TestAceptacion1 {
 
         //https://googlechromelabs.github.io/chrome-for-testing/   descarguen de aqui hehe
         
-    	String path = "C:/WebDrivers/chromedriver-win64";   
+    	String path = "C:/WebDrivers/chromedriver-win64";  //ubicacion del chromedriver
         
         System.setProperty("webdriver.chrome.driver", path);
         
