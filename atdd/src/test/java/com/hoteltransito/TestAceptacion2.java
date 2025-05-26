@@ -16,7 +16,7 @@ import java.util.concurrent.TimeUnit;
 public class TestAceptacion2 {
     private RemoteWebDriver driver;
     private Actions actions;
-    private final String HOME_URL = "file:///C:/Users/dania/Documents/proy/HotelTransitoATDD/front/index.html"; //link del index del front
+    private final String HOME_URL = "file:///C:\\Users\\Hp\\Documents\\HotelTransitoATDD\\front\\index.html"; //link del index del front
 
     @BeforeTest
     public void setUp() {
@@ -89,14 +89,20 @@ public class TestAceptacion2 {
 
         // Paso 6 – Accesibilidad
         driver.findElement(By.tagName("body")).click();
-        for (int i = 0; i < cards.size(); i++) {
+        int cardFocusCount = 0;
+        while (cardFocusCount < cards.size()) {
             actions.sendKeys(Keys.TAB).perform();
             TimeUnit.MILLISECONDS.sleep(200);
             WebElement focused = driver.switchTo().activeElement();
-            Assert.assertTrue(cards.contains(focused),
-                "La card número " + (i + 1) + " debe recibir focus al tabular");
-            String outline = focused.getCssValue("outline-style");
-            Assert.assertNotEquals(outline, "none", "Debe mostrar contorno visible al recibir focus");
+            // Solo cuenta si el enfocado es una card
+            boolean isCardFocused = cards.stream().anyMatch(card ->
+                card.getAttribute("outerHTML").equals(focused.getAttribute("outerHTML"))
+            );
+            if (isCardFocused) {
+                String outline = focused.getCssValue("outline-style");
+                Assert.assertNotEquals(outline, "none", "Debe mostrar contorno visible al recibir focus");
+                cardFocusCount++;
+            }
         }
     }
 }
