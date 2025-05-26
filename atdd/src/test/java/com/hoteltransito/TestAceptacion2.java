@@ -28,7 +28,7 @@ public class TestAceptacion2 {
     @AfterTest
     public void tearDown() {
         if (driver != null) {
-            driver.quit();
+            driver.quit();//siempre cerrar
         }
     }
 
